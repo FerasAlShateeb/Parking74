@@ -70,7 +70,6 @@ public class AdvancedDoors : MonoBehaviour
     {
         if(Input.GetButtonDown("Interact"))
         {
-            Debug.Log("Button has been clicked");
         }
         // if (lockOB.activeInHierarchy)
         // {
