@@ -24,7 +24,6 @@ public class FlashlightAdvanced : MonoBehaviour
     void Start()
     {
         light = GetComponent<Light>();
-
         off = true;
         light.enabled = false;
 
