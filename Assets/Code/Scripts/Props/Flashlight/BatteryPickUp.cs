@@ -10,20 +10,20 @@ public class BatteryPickUp : MonoBehaviour
     public GameObject flashlight;
 
     public AudioSource pickUpSound;
-    public GUI gui;
+    // public GUI gui;
 
     void Start()
     {
         inReach = false;
         pickUpText.SetActive(false);
-        if (gui == null)
-        {
-            gui = FindObjectOfType<GUI>();
-            if (gui == null)
-            {
-                Debug.LogError("GUI script not found in the scene.");
-            }
-        }
+        // if (gui == null)
+        // {
+        //     gui = FindObjectOfType<GUI>();
+        //     if (gui == null)
+        //     {
+        //         Debug.LogError("GUI script not found in the scene.");
+        //     }
+        // }
     }
 
     void OnTriggerEnter(Collider other)
@@ -32,7 +32,7 @@ public class BatteryPickUp : MonoBehaviour
         {
             inReach = true;
             pickUpText.SetActive(true);
-            gui.isPick = true;
+            // gui.isPick = true;
         }
 
     }
@@ -43,7 +43,7 @@ public class BatteryPickUp : MonoBehaviour
         {
             inReach = false;
             pickUpText.SetActive(false);
-            gui.isPick = false;
+            // gui.isPick = false;
         }
     }
 
@@ -54,7 +54,7 @@ public class BatteryPickUp : MonoBehaviour
     {
         if(Input.GetButtonDown("Interact") && inReach)
         {
-            gui.isPick = false;
+            // gui.isPick = false;
             flashlight.GetComponent<FlashlightAdvanced>().batteries += 1;
             pickUpSound.Play();
             inReach = false;

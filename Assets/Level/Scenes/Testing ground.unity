@@ -415,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Batteries
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 44b8b3652855f7e4688295c7e689e3c8, type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2394,7 +2398,6 @@ MonoBehaviour:
   pickUpText: {fileID: 571622082}
   flashlight: {fileID: 158934710}
   pickUpSound: {fileID: 776475490}
-  gui: {fileID: 0}
 --- !u!1 &1142153708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,6 +4193,7 @@ GameObject:
   - component: {fileID: 2059696731}
   - component: {fileID: 2059696730}
   - component: {fileID: 2059696733}
+  - component: {fileID: 2059696734}
   m_Layer: 0
   m_Name: Reach
   m_TagString: Reach
@@ -4310,6 +4314,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2059696734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059696728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d4d2c740242411d8e6de1b14543753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  gui: {fileID: 713414733}
 --- !u!4 &543450652412005034
 Transform:
   m_ObjectHideFlags: 0
@@ -4340,7 +4358,7 @@ GameObject:
   - component: {fileID: 919132148203032594}
   m_Layer: 0
   m_Name: Keys
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4361,7 +4379,6 @@ MonoBehaviour:
   invOB: {fileID: 693034824}
   pickUpText: {fileID: 571622082}
   keySound: {fileID: 776475490}
-  gui: {fileID: 0}
   inReach: 0
 --- !u!65 &919132148203032594
 BoxCollider:

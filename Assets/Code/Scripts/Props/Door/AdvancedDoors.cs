@@ -80,9 +80,7 @@ public class AdvancedDoors : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Interact"))
-        {
-        }
+
         // if (lockOB.activeInHierarchy)
         // {
         //     locked = true;
@@ -105,7 +103,7 @@ public class AdvancedDoors : MonoBehaviour
 
         if (inReach && doorisClosed && unlocked && Input.GetButtonDown("Interact"))
         {
-            door.SetBool("Open", true);
+            door.SetBool("Open", true); //line 108
             door.SetBool("Closed", false);
             openText.SetActive(false);
             openSound.Play();
