@@ -1724,9 +1724,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 713414731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ebbce2874184d95bfadefdba2dede0, type: 3}
+  m_Script: {fileID: 11500000, guid: bba099ff994f54393ba51b9046f4f7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cross: {fileID: 104772402}
+  Hand: {fileID: 1548159588}
+  isPick: 0
 --- !u!4 &748492185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -2049,6 +2052,7 @@ MonoBehaviour:
   openSound: {fileID: 1500091404}
   locked: 0
   unlocked: 1
+  gui: {fileID: 0}
 --- !u!95 &860960983
 Animator:
   serializedVersion: 5
@@ -2390,6 +2394,7 @@ MonoBehaviour:
   pickUpText: {fileID: 571622082}
   flashlight: {fileID: 158934710}
   pickUpSound: {fileID: 776475490}
+  gui: {fileID: 0}
 --- !u!1 &1142153708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,6 +4361,7 @@ MonoBehaviour:
   invOB: {fileID: 693034824}
   pickUpText: {fileID: 571622082}
   keySound: {fileID: 776475490}
+  gui: {fileID: 0}
   inReach: 0
 --- !u!65 &919132148203032594
 BoxCollider:
