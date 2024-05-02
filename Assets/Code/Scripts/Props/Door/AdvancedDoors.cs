@@ -23,6 +23,7 @@ public class AdvancedDoors : MonoBehaviour
     private bool doorisClosed;
     public bool locked;
     public bool unlocked;
+    public GUI gui;
 
 
 
@@ -34,12 +35,14 @@ public class AdvancedDoors : MonoBehaviour
         {
             inReach = true;
             openText.SetActive(true);
+            gui.isPick = true;
         }
 
         if (other.gameObject.tag == "Reach" && doorisOpen)
         {
             inReach = true;
             closeText.SetActive(true);
+            gui.isPick = true;
         }
     }
 
@@ -51,6 +54,7 @@ public class AdvancedDoors : MonoBehaviour
             openText.SetActive(false);
             lockedText.SetActive(false);
             closeText.SetActive(false);
+            gui.isPick = false;
         }
     }
 
@@ -61,6 +65,14 @@ public class AdvancedDoors : MonoBehaviour
         doorisOpen = false;
         closeText.SetActive(false);
         openText.SetActive(false);
+        if (gui == null)
+        {
+            gui = FindObjectOfType<GUI>();
+            if (gui == null)
+            {
+                Debug.LogError("GUI script not found in the scene.");
+            }
+        }
     }
 
 
