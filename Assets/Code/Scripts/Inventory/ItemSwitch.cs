@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponsSwitch : MonoBehaviour
+public class ItemSwitch : MonoBehaviour
 {
     public GameObject object01;
     private GameObject object02;

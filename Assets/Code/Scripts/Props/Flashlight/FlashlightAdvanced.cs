@@ -19,6 +19,7 @@ public class FlashlightAdvanced : MonoBehaviour
 
     private bool on;
     private bool off;
+    public GameObject flashlightModel;
 
 
     void Start()
@@ -26,7 +27,6 @@ public class FlashlightAdvanced : MonoBehaviour
         light = GetComponent<Light>();
         off = true;
         light.enabled = false;
-
     }
 
 
@@ -35,8 +35,8 @@ public class FlashlightAdvanced : MonoBehaviour
     {
         text.text = lifetime.ToString("0") + "%";
         batteryText.text = batteries.ToString();
-
-        if(Input.GetButtonDown("flashlight") && off)
+        bool flashExist = flashlightModel.activeSelf;
+        if(Input.GetButtonDown("flashlight") && off && flashExist)
         {
             flashON.Play();
             light.enabled = true;
@@ -44,7 +44,7 @@ public class FlashlightAdvanced : MonoBehaviour
             off = false;
         }
 
-        else if (Input.GetButtonDown("flashlight") && on)
+        else if (Input.GetButtonDown("flashlight") && on && flashExist)
         {
             flashOFF.Play();
             light.enabled = false;

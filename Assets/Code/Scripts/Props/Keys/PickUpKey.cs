@@ -8,7 +8,7 @@ public class PickUpKey : MonoBehaviour
     public GameObject invOB;
     public GameObject pickUpText;
     public AudioSource keySound;
-    // public GUI gui;
+    public InventoryHotBarUI inventory;
 
 
     public bool inReach;
@@ -19,14 +19,14 @@ public class PickUpKey : MonoBehaviour
         inReach = false;
         pickUpText.SetActive(false);
         invOB.SetActive(false);
-        // if (gui == null)
-        // {
-        //     gui = FindObjectOfType<GUI>();
-        //     if (gui == null)
-        //     {
-        //         Debug.LogError("GUI script not found in the scene.");
-        //     }
-        // }
+        if (inventory == null)
+        {
+            inventory = FindObjectOfType<InventoryHotBarUI>();
+            if (inventory == null)
+            {
+                Debug.LogError("Invetory script not found in the scene.");
+            }
+        }
     }
 
 
@@ -36,8 +36,6 @@ public class PickUpKey : MonoBehaviour
         {
             inReach = true;
             pickUpText.SetActive(true);
-            // gui.isPick = true;
-
         }
     }
 
@@ -47,8 +45,6 @@ public class PickUpKey : MonoBehaviour
         {
             inReach = false;
             pickUpText.SetActive(false);
-            // gui.isPick = false;
-
         }
     }
 
@@ -61,9 +57,7 @@ public class PickUpKey : MonoBehaviour
             keySound.Play();
             invOB.SetActive(true);
             pickUpText.SetActive(false);
-            // gui.isPick = false;
-        }
-
-        
+            inventory.ShowIcon("Box3");
+        }  
     }
 }
