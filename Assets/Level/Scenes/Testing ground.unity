@@ -5305,6 +5305,7 @@ GameObject:
   - component: {fileID: 1285580604851237883}
   - component: {fileID: 1285580604852367675}
   - component: {fileID: 1285580604861619259}
+  - component: {fileID: 1285580604861619260}
   m_Layer: 0
   m_Name: FlashlightModel
   m_TagString: Untagged
@@ -5338,7 +5339,7 @@ Animator:
   m_GameObject: {fileID: 1285580604854366203}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9a3b57f0a1248be419dd9c4d54748512, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 117f56bba4f6c428184853d980fb23ad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -5349,6 +5350,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1285580604861619260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285580604854366203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954ef6cace0f465d8c66234c43d4786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlightAnimator: {fileID: 1285580604861619259}
+  onAnimationDuration: 1
 --- !u!4 &1302960661600921415
 Transform:
   m_ObjectHideFlags: 0
