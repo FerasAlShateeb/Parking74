@@ -609,6 +609,7 @@ MonoBehaviour:
   batteries: 2
   flashON: {fileID: 1990746319}
   flashOFF: {fileID: 665095248}
+  delayTime: 0.4
   flashlightModel: {fileID: 1285580604854366203}
 --- !u!1 &222050343
 GameObject:
@@ -2326,7 +2327,7 @@ GameObject:
   - component: {fileID: 965990595}
   - component: {fileID: 965990596}
   m_Layer: 0
-  m_Name: FlashlightHolder
+  m_Name: ItemsHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
