@@ -46,7 +46,7 @@ public class CarKey : MonoBehaviour
     IEnumerator FlashIndicator()
     {
         indicatorLight.enabled = true;
-        animator.SetBool("isPanic", true);
+        animator.SetTrigger("Panic");
         // Change material color to red
         indicatorRenderer.material = redMaterial;
 
