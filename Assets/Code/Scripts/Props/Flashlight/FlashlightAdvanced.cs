@@ -16,6 +16,7 @@ public class FlashlightAdvanced : MonoBehaviour
 
     public AudioSource flashON;
     public AudioSource flashOFF;
+    public float delayTime;
 
     private bool on;
     private bool off;
@@ -36,20 +37,21 @@ public class FlashlightAdvanced : MonoBehaviour
         text.text = lifetime.ToString("0") + "%";
         batteryText.text = batteries.ToString();
         bool flashExist = flashlightModel.activeSelf;
-        if(Input.GetButtonDown("flashlight") && off && flashExist)
-        {
-            flashON.Play();
-            light.enabled = true;
-            on = true;
-            off = false;
-        }
-
-        else if (Input.GetButtonDown("flashlight") && on && flashExist)
+        if(!flashExist && on)
         {
             flashOFF.Play();
             light.enabled = false;
             on = false;
             off = true;
+        }
+        if(Input.GetButtonDown("flashlight") && off && flashExist)
+        {
+            StartCoroutine(TriggerFlash(true));
+        }
+
+        else if (Input.GetButtonDown("flashlight") && on && flashExist)
+        {
+            StartCoroutine(TriggerFlash(false));
         }
 
         if (on)
@@ -86,8 +88,29 @@ public class FlashlightAdvanced : MonoBehaviour
             batteries = 0;
         }
 
+    IEnumerator TriggerFlash(bool state)
+    {
+        yield return new WaitForSeconds(delayTime);
+        if(state) //On or off
+        {
+            flashON.Play();
+            light.enabled = true;
+            on = true;
+            off = false;
+        }
+        else
+        {
+            flashOFF.Play();
+            light.enabled = false;
+            on = false;
+            off = true;
+        }
+        
+    }
 
 
     }
 
 }
+
+

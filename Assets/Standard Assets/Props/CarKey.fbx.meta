@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: c0e73aa65deaab24f8f265b703f39244
+guid: 00ad9c8723f3b4f0d9f7b7685a43b85c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chrome
+    second: {fileID: 2100000, guid: 51c6f8125c3af45e68590bb043a600bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass - Heavy Color
+    second: {fileID: 2100000, guid: a2475054f5b504e6687e17b0de3c45ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint - Enamel Glossy (White)
+    second: {fileID: 2100000, guid: 6a87a25ce2ee14bb2afc75d54c26b06f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic - Matte (Black)
+    second: {fileID: 2100000, guid: f01773b310346435394db5a026654466, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic - Matte (Red)
+    second: {fileID: 2100000, guid: e50f7501b13f6481d8dd9ab0e1c66c7f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
