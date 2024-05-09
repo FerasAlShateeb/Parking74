@@ -64,6 +64,10 @@ public class ReadNotes : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitButton();
+        }
         
     }
 
@@ -72,10 +76,10 @@ public class ReadNotes : MonoBehaviour
     {
 
         noteUI.SetActive(false);
+        pickUpText.SetActive(false);
         hud.SetActive(true);
         inv.SetActive(true);
         player.GetComponent<FirstPersonController>().enabled = true;
         this.gameObject.SetActive(false);
-
     }
 }
