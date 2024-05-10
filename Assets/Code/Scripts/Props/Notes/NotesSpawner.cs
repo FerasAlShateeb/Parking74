@@ -3,6 +3,7 @@ using UnityEngine;
 public class NotesSpawner : MonoBehaviour
 {
     public GameObject[] notes;
+    public Transform[] notesSpawnPoints;
     private int count = 0;
 
     void Start()
