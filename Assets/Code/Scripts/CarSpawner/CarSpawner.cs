@@ -7,10 +7,12 @@ public class CarSpawner : MonoBehaviour
 
     [SerializeField] private GameObject car;
     [SerializeField] private GameObject SpawnPoints;
+    private List<Transform> rotations;
 
     // Start is called before the first frame update
     void Start()
     {
+
         Spawn(SpawnPoints.GetComponentInChildren<Transform>(), car);
     }
 
@@ -23,4 +25,6 @@ public class CarSpawner : MonoBehaviour
             Instantiate(car, spawnPos, car.transform.rotation);
         }
     }
+
+    
 }
