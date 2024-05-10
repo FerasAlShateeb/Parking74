@@ -28,9 +28,7 @@ public class NotesSpawner : MonoBehaviour
         if((count+1) != notes.Length)
         {
             count++;
+            notes[count].SetActive(true);
         }
-        // Activate the next note
-        notes[count].SetActive(true);
-        // Move to the next note
     }
 }

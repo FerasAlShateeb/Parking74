@@ -64,7 +64,7 @@ public class ReadNotes : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && noteUI.activeSelf)
         {
             ExitButton();
         }

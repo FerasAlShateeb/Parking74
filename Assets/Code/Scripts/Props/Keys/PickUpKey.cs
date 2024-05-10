@@ -56,8 +56,8 @@ public class PickUpKey : MonoBehaviour
             keyOB.SetActive(false);
             keySound.Play();
             invOB.SetActive(true);
-            pickUpText.SetActive(false);
             inventory.ShowIcon("Box3", this.gameObject.name);
+            pickUpText.SetActive(false);
         }  
     }
 }
