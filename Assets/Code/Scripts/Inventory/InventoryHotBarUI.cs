@@ -74,12 +74,12 @@ public class InventoryHotBarUI : MonoBehaviour
         }
     }
 
-    public void ShowIcon(string name)
+    public void ShowIcon(string box, string name)
     {
-        GameObject item = GameObject.Find(name);
+        GameObject item = GameObject.Find(box);
         if (item != null)
         {
-            GameObject itemObj = GameObject.Find("Keys");
+            GameObject itemObj = GameObject.Find(name);
             if(itemObj == null)
             {
                 // Activate icon of selected item
