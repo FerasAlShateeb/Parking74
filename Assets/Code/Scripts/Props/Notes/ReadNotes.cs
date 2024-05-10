@@ -1,33 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
-
 
 public class ReadNotes : MonoBehaviour
 {
     public GameObject player;
-    public GameObject noteUI;
+    public NoteInteraction noteInteraction; // Reference to the NoteInteraction script
     public GameObject hud;
     public GameObject inv;
-
     public GameObject pickUpText;
-
     public AudioSource pickUpSound;
-
     public bool inReach;
-
-
+    private string name;
 
     void Start()
     {
-        noteUI.SetActive(false);
         hud.SetActive(true);
         inv.SetActive(true);
         pickUpText.SetActive(false);
-
         inReach = false;
-        
     }
 
     void OnTriggerEnter(Collider other)
@@ -36,7 +26,7 @@ public class ReadNotes : MonoBehaviour
         {
             inReach = true;
             pickUpText.SetActive(true);
-
+            name = this.gameObject.name;
         }
     }
 
@@ -49,37 +39,35 @@ public class ReadNotes : MonoBehaviour
         }
     }
 
-
-
-
     void Update()
     {
-        if(Input.GetButtonDown("Interact") && inReach)
+        if (Input.GetButtonDown("Interact") && inReach)
         {
-            noteUI.SetActive(true);
+            // Call the method from NoteInteraction to show the next NoteUI
             pickUpSound.Play();
             hud.SetActive(false);
             inv.SetActive(false);
             player.GetComponent<FirstPersonController>().enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            noteInteraction.ShowNextNoteUI(); // line 51
+            this.gameObject.SetActive(false);
         }
-        if(Input.GetKeyDown(KeyCode.Escape) && noteUI.activeSelf)
+
+        if (Input.GetKeyDown(KeyCode.Escape) && noteInteraction.AnyNoteUIActive())
         {
             ExitButton();
         }
-        
     }
-
 
     public void ExitButton()
     {
+        // Call the method from NoteInteraction to hide all NoteUIs
+        noteInteraction.HideNoteUI();
 
-        noteUI.SetActive(false);
         pickUpText.SetActive(false);
         hud.SetActive(true);
         inv.SetActive(true);
         player.GetComponent<FirstPersonController>().enabled = true;
-        this.gameObject.SetActive(false);
     }
 }

@@ -5,42 +5,26 @@ public class NotesSpawner : MonoBehaviour
     public GameObject[] notes;
     public GameObject SpawnOB;
     private Transform[] spawnPoints;
-    private int count = 0;
 
     void Start()
     {
         FindSpawnPoints();
+        SpawnAllNotes();
     }
 
-    void Update()
+    void SpawnAllNotes()
     {
-        // Check if all notes are activated
-        if (count < notes.Length)
+        for (int i = 0; i < notes.Length; i++)
         {
-            // Activate next note if it's not active
-            if (!notes[count].activeInHierarchy)
-            {
-                ActivateNextNote();
-            }
-        }
-    }
-
-    void ActivateNextNote()
-    {
-        if((count+1) != notes.Length)
-        {
-            count++;
-            notes[count].SetActive(true);
-
             int spawnIndex = Random.Range(0, spawnPoints.Length);
-            notes[count].transform.position = spawnPoints[spawnIndex].position;
-            notes[count].transform.rotation = spawnPoints[spawnIndex].rotation;
+            notes[i].transform.position = spawnPoints[spawnIndex].position;
+            notes[i].transform.rotation = spawnPoints[spawnIndex].rotation;
+            notes[i].SetActive(true);
         }
     }
 
     void FindSpawnPoints()
     {
-        // Find all spawn points under NotesSpawnPoints
         Transform notesSpawnPoints = SpawnOB.transform;
         spawnPoints = new Transform[notesSpawnPoints.childCount];
 
