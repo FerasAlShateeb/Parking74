@@ -7665,8 +7665,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1736101625}
-        m_TargetAssemblyTypeName: ReadNotes, Assembly-CSharp
+      - m_Target: {fileID: 1602326664}
+        m_TargetAssemblyTypeName: ReadNoteKey, Assembly-CSharp
         m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
