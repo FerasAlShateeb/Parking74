@@ -7,6 +7,7 @@ public class ItemSwitch : MonoBehaviour
     public GameObject object01;
     public GameObject object02;
     private GameObject object03;
+    private bool keyPickedUp = false;
 
 
 
@@ -29,7 +30,7 @@ public class ItemSwitch : MonoBehaviour
             // object03.SetActive(false);
         }
 
-        if (Input.GetButtonDown("2"))
+        if (Input.GetButtonDown("2") && keyPickedUp)
         {
             object01.SetActive(false);
             object02.SetActive(true);
@@ -43,5 +44,10 @@ public class ItemSwitch : MonoBehaviour
             // object03.SetActive(true);
         }
 
+    }
+
+    public void SetKeyPickedUp()
+    {
+        keyPickedUp = true;
     }
 }
