@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class ProximityTrigger : MonoBehaviour
 {
@@ -44,6 +45,6 @@ public class ProximityTrigger : MonoBehaviour
        
         yield return new WaitForSeconds(delay);
        
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

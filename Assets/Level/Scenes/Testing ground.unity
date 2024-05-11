@@ -8095,10 +8095,10 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879935532}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: d4baa13c0e91ea849bbf9fd67dce7ed8, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 9e00d3545bc4db1408b6b82a29f066d7, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 1787044186}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
@@ -19405,6 +19405,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!20 &1787044186 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 1002125630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1797523636
 GameObject:
   m_ObjectHideFlags: 0
