@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
 
     public GameObject PauseMenuUI;
+
+    public GameObject player;
 
     // Update is called once per frame
     void Update()
@@ -29,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        player.GetComponent<FirstPersonController>().enabled = true;
     }
 
     void Pause()
@@ -36,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        player.GetComponent<FirstPersonController>().enabled = false;
     }
 
     public void LoadMenu()
