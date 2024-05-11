@@ -46,7 +46,7 @@ public class Car : MonoBehaviour
             }
             else
             {
-                if (carKey != null)
+                if (carKey != null && (KeyModel.activeSelf))
                 {
                     carKey.DeactivateIndicator();
                 }

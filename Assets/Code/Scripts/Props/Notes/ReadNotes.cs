@@ -54,11 +54,6 @@ public class ReadNotes : MonoBehaviour
             noteInteraction.ShowNextNoteUI(); // line 51
             this.gameObject.SetActive(false);
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape) && noteInteraction.AnyNoteUIActive())
-        {
-            ExitButton();
-        }
     }
 
     public void ExitButton()
