@@ -8876,6 +8876,10 @@ PrefabInstance:
       propertyPath: m_SlopeLimit
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -20800,14 +20804,14 @@ VideoPlayer:
   m_GameObject: {fileID: 1873607668}
   m_Enabled: 1
   m_VideoClip: {fileID: 32900000, guid: edbf64ea55e7433498256d23fadb59aa, type: 3}
-  m_TargetCameraAlpha: 1
+  m_TargetCameraAlpha: 0.116
   m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 1787044186}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
+  m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 2
@@ -21936,7 +21940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1002125631}
   teleportDistance: 10
-  teleportCooldown: 5
+  teleportCooldown: 40
   returnCooldown: 5
   chaseProbability: 1
   rotationSpeed: 5
