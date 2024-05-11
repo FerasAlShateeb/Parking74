@@ -11,6 +11,7 @@ public class ReadNotes : MonoBehaviour
     public AudioSource pickUpSound;
     public bool inReach;
     private string name;
+    public GameObject flashlight;
 
     void Start()
     {
@@ -64,10 +65,10 @@ public class ReadNotes : MonoBehaviour
     {
         // Call the method from NoteInteraction to hide all NoteUIs
         noteInteraction.HideNoteUI();
-
         pickUpText.SetActive(false);
         hud.SetActive(true);
         inv.SetActive(true);
         player.GetComponent<FirstPersonController>().enabled = true;
+        flashlight.GetComponent<FlashlightAdvanced>().batteries += 1;
     }
 }
