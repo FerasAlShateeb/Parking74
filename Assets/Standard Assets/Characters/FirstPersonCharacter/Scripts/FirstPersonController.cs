@@ -255,5 +255,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+        public void Teleport(Vector3 postion, Transform rotation)
+        {
+            transform.position = postion;
+            Physics.SyncTransforms();
+
+            m_MouseLook.LookRotation(transform, rotation);
+            m_MoveDir = Vector3.zero;
+        }
     }
 }
