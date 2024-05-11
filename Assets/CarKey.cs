@@ -34,13 +34,13 @@ public class CarKey : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("flashlight"))
-        {
-            if (indicatorRenderer != null && indicatorLight != null)
-            {
-                StartCoroutine(FlashIndicator());
-            }
-        }
+        // if(Input.GetButtonDown("flashlight"))
+        // {
+        //     if (indicatorRenderer != null && indicatorLight != null)
+        //     {
+        //         StartCoroutine(FlashIndicator());
+        //     }
+        // }
     }
 
     IEnumerator FlashIndicator()
@@ -58,5 +58,29 @@ public class CarKey : MonoBehaviour
         // Turn off the light
         indicatorLight.enabled = false;
         animator.SetBool("isPanic", false);
+    }
+
+    IEnumerator noIndicator()
+    {
+        animator.SetTrigger("Panic");
+
+        // Wait for 1 second
+        yield return new WaitForSeconds(1.0f);
+
+        animator.SetBool("isPanic", false);
+    }
+
+    public void ActivateIndicator()
+    {
+        if (indicatorRenderer != null && indicatorLight != null)
+        {
+            StartCoroutine(FlashIndicator());
+        }
+    }
+
+    // Method to deactivate the indicator light
+    public void DeactivateIndicator()
+    {
+        StartCoroutine(noIndicator());
     }
 }
