@@ -65738,8 +65738,8 @@ Transform:
   m_GameObject: {fileID: 4395524283151282726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9, y: -0.28529334, z: 1.0490799}
-  m_LocalScale: {x: 137, y: 1, z: 1}
+  m_LocalPosition: {x: -5.9, y: -0.28529334, z: 2.5}
+  m_LocalScale: {x: 132, y: 30, z: 65}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8905997378510627127}
@@ -65757,7 +65757,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -91590,7 +91590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8905997378510627127}
   m_Layer: 0
-  m_Name: Parking 74 Model
+  m_Name: Feras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

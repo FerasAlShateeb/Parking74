@@ -8,12 +8,13 @@ public class CarSpawner : MonoBehaviour
 
     [SerializeField] private GameObject car;
     [SerializeField] private GameObject SpawnPoints;
-    private List<Transform> rotations = new List<Transform>();
+    [SerializeField] private Transform parent;
+    private bool isCar = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        setRotations();
         Spawn(SpawnPoints.GetComponentInChildren<Transform>(), car);
     }
 
@@ -21,18 +22,23 @@ public class CarSpawner : MonoBehaviour
     {
         foreach (Transform spawnPoint in spawnPoints)
         {
+            int random = Random.Range(0, 776);
+
+           
             Vector3 spawnPos = spawnPoint.position;
-            Debug.LogWarning(spawnPoint.name);
 
-            Instantiate(car, spawnPos, car.transform.rotation);
+            GameObject tmp = Instantiate(car, spawnPos, spawnPoint.rotation, parent);
+            tmp.SetActive(true);
+            if (!isCar && random > 400)
+            {
+                isCar = true;
+                Car script = tmp.GetComponent<Car>();
+
+                if (script != null )
+                {
+                    script.enabled = true;
+                }
+            }
         }
-    }
-
-    private void setRotations()
-    {
-        rotations.Add(car.transform);
-
-        
-
     }
 }
