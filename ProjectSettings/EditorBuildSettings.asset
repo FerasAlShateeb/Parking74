@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/MainMenu.unity
     guid: 17e6a01ecb5702f4698f9391ef0b1fc1
   - enabled: 1
+    path: Assets/Level/Scenes/StartCutSence/StartCutSence.unity
+    guid: 3fae2101b0e424485a3012a27ea61cb0
+  - enabled: 1
     path: Assets/Level/Scenes/Testing ground.unity
     guid: 6f900e0b4a738d94aab921e4abfdab4e
   m_configObjects: {}

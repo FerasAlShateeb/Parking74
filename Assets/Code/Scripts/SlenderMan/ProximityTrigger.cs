@@ -45,6 +45,6 @@ public class ProximityTrigger : MonoBehaviour
        
         yield return new WaitForSeconds(delay);
        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }

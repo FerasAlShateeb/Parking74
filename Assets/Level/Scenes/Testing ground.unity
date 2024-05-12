@@ -771,7 +771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &56824219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5936,7 +5936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &641603578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15073,6 +15073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   car: {fileID: 6164874799283827411}
   SpawnPoints: {fileID: 744095711}
+  parent: {fileID: 0}
 --- !u!4 &1343033061
 Transform:
   m_ObjectHideFlags: 0
@@ -21947,8 +21948,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1002125631}
-  teleportDistance: 10
-  teleportCooldown: 40
+  teleportDistance: 8
+  teleportCooldown: 15
   returnCooldown: 5
   chaseProbability: 1
   rotationSpeed: 5
