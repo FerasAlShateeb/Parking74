@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Car : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class Car : MonoBehaviour
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
             // Activate car sound if the player is within the activation distance
-            Debug.Log("Distance is " + distanceToPlayer);
+            Debug.LogWarning("Distance is " + distanceToPlayer);
             if ((distanceToPlayer <= activationDistance) && KeyModel.activeSelf)
             {
                 if (carSrc != null)
@@ -42,6 +43,11 @@ public class Car : MonoBehaviour
                 if (carKey != null)
                 {
                     carKey.ActivateIndicator();
+                }
+
+                if (distanceToPlayer <= 10f)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
             else

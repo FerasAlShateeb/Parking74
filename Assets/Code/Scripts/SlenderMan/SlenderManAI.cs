@@ -113,7 +113,7 @@ public class SlenderManAI : MonoBehaviour
         transform.position = randomPosition;
 
         
-        audioSource.Play();
+        // audioSource.Play();
     }
 
     private void TeleportToBaseSpot()
@@ -122,7 +122,7 @@ public class SlenderManAI : MonoBehaviour
         returningToBase = true;
 
       
-        audioSource.Play();
+        // audioSource.Play();
     }
 
     private void RotateTowardsPlayer()
